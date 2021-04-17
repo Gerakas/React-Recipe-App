@@ -46,6 +46,7 @@ const App = () => {
           image={recipe.recipe.image} 
           calories={Math.ceil(recipe.recipe.calories)} 
           yield={recipe.recipe.yield}
+          ingredients={recipe.recipe.ingredients}
         />
       ))}
     </div>
