@@ -20,6 +20,7 @@ const App = () => {
     const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`);
     const data = await response.json();
     setRecipes(data.hits);
+    console.log(data.hits)
   }
 
   const searchInput = event => {
@@ -39,16 +40,20 @@ const App = () => {
         <input className={style.searchBar} type="text" value={search} onChange={searchInput}/>
         <button className={style.searchButton} type="submit">Search</button>
       </form>
-      {recipes.map((recipe, index) => (
-        <Recipe
-          key={recipe.recipe.label + "-" + index}
-          title={recipe.recipe.label} 
-          image={recipe.recipe.image} 
-          calories={Math.ceil(recipe.recipe.calories)} 
-          yield={recipe.recipe.yield}
-          ingredients={recipe.recipe.ingredients}
-        />
-      ))}
+      <div className={style.recipeContainer}>
+        {recipes.map((recipe, index) => (
+          <Recipe
+            key={recipe.recipe.label + "-" + index}
+            title={recipe.recipe.label} 
+            image={recipe.recipe.image} 
+            calories={Math.ceil(recipe.recipe.calories)} 
+            yield={recipe.recipe.yield}
+            ingredients={recipe.recipe.ingredients}
+            time={recipe.recipe.totalTime}
+            mealType={recipe.recipe.mealType}
+          />
+        ))}
+      </div>
     </div>
   )
 }

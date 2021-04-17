@@ -1,0 +1,8 @@
+.recipe {
+    background-color: #f18888;
+    width: max-content;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
