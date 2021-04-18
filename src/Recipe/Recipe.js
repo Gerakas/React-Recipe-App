@@ -5,7 +5,7 @@ const Recipe = (props) => {
 
     let timeFeature = "";
 
-    if (props.time != 0) {
+    if (props.time !== 0) {
         timeFeature = props.time + " min";
     }
     else {
@@ -43,6 +43,9 @@ const Recipe = (props) => {
                         </li>
                     ))}
                 </ul>
+                <div className={style.linkContainer}>
+                    <a className={style.link} href={props.link} target="_blank" rel="noreferrer">Directions <i className="fas fa-chevron-right"></i></a>
+                </div>
             </section>
         </div>
     );

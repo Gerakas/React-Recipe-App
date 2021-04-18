@@ -17,6 +17,8 @@
 .recipeInfo {
     text-align: start;
     padding: 2rem;
+    height: 100%;
+    position: relative;
 }
 
 .title {
@@ -50,6 +52,7 @@
     text-align: center;
     font-size: 0.9rem;
     margin-bottom: 0.25rem;
+    color: #a4b4ca;
 }
 
 .metaValue {
@@ -79,6 +82,21 @@
     text-decoration: none;
     line-height: 1.25rem;
     margin: 0.25rem 0;
+}
+
+.linkContainer {
+    margin: 2rem 0 1rem;
+}
+
+.link {
+    font-size: 1rem;
+    border-radius: 20px;
+    border: none;
+    background-color: #acb9cc;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 800px) {
