@@ -36,10 +36,12 @@ const App = () => {
 
   return (
     <div className={style.App}>
-      <form onSubmit={formSubmit} className={style.searchForm}> 
-        <input className={style.searchBar} type="text" value={search} onChange={searchInput}/>
-        <button className={style.searchButton} type="submit">Search</button>
-      </form>
+      <div className={style.searchBarCont}>
+        <form onSubmit={formSubmit} className={style.searchForm}> 
+          <input className={style.searchBar} type="text" value={search} onChange={searchInput}/>
+          <button className={style.searchButton} type="submit">Search</button>
+        </form>
+      </div>
       <div className={style.recipeContainer}>
         {recipes.map((recipe, index) => (
           <Recipe

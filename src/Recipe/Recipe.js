@@ -7,7 +7,10 @@ const Recipe = (props) => {
 
     if (props.time != 0) {
         timeFeature = props.time + " min";
-    }; 
+    }
+    else {
+        timeFeature = "N/A";
+    };
 
 
     return(
@@ -17,15 +20,29 @@ const Recipe = (props) => {
                 <h2 className={style.title}>{props.title}</h2>
                 <h3 className={style.mealType}>{props.mealType}</h3>
                 <div className={style.meta}>
-                    <p className={style.servings}>Servings: {props.yield}</p>
-                    <p className={style.calories}>{props.calories} calories ({Math.floor(props.calories / props.yield)} p/s)</p>
-                    <p className={style.time}>{timeFeature}</p>
+                    <div className={style.metaItem}>
+                        <p className={style.metaTitle}>Servings:</p>
+                        <p className={style.metaValue}>{props.yield}</p>
+                    </div>
+                    <div className={`${style.metaItem} ${style.divider}`}>
+                        <p className={style.metaTitle}>Calories:</p>
+                        <p className={style.metaValue}>{Math.floor(props.calories / props.yield)} p/s</p>
+                    </div>
+                    <div className={style.metaItem}>
+                    <p className={style.metaTitle}>Time:</p>
+                        <p className={style.metaValue}>{timeFeature}</p>
+                    </div>
                 </div>
-                <u className={style.ingredientsList}>
-                    {props.ingredients.map(ingredient => (
-                        <li className={style.ingredient}>{ingredient.text}</li>
+                <h3 className={style.ingredientsTitle}>Ingredients: </h3>
+                <ul className={style.ingredientsList}>
+                    {props.ingredients.map((ingredient, index) => (
+                        <li 
+                        className={style.ingredient}
+                        key={index}>
+                            {ingredient.text}
+                        </li>
                     ))}
-                </u>
+                </ul>
             </section>
         </div>
     );

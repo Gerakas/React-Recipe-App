@@ -1,8 +1,88 @@
 .recipe {
-    background-color: #f18888;
-    width: max-content;
-    max-width: 300px;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 350px;
     display: flex;
     flex-direction: column;
-    margin: 1rem;
+    margin: 2rem 1rem;
+    box-shadow: 5px 5px 15px rgba(59, 38, 38, 0.1),
+    -5px -5px 15px rgba(61, 61, 61, 0.1);
+}
+
+.image {
+    height: auto;
+    width: 100%;
+}
+
+.recipeInfo {
+    text-align: start;
+    padding: 2rem;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin: 5px 0;
+    font-family: 'Goudy Bookletter 1911', serif;
+}
+
+.mealType {
+    font-family: 'Gentium Book Basic', serif;
+    font-style: italic;
+    font-weight: lighter;
+    text-transform: capitalize;
+    color: #a4b4ca;
+}
+
+.meta {
+    display: flex;
+    margin: 2rem 0;
+}
+
+.metaItem {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 33.3%;
+
+}
+
+.metaTitle {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.metaValue {
+    text-align: center;
+    font-weight: 500;
+}
+
+.divider {
+    border-left: 1px solid #acb9cc;
+    border-right: 1px solid #acb9cc;
+}
+
+.ingredientsTitle {
+    font-family: 'Gentium Book Basic', serif;
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.ingredientsList {
+    margin-left: 1rem;
+}
+
+.ingredient {
+    font-style: italic;
+    text-decoration: none;
+    line-height: 1.25rem;
+    margin: 0.25rem 0;
+}
+
+@media screen and (max-width: 800px) {
+    .recipe {
+        max-width: unset;
+    }
 }
