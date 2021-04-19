@@ -78,8 +78,21 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 20vh 5px;
+    padding: 10vh 5px;
     max-width: 1300px;
+    margin: 0 auto;
+}
+
+.heroImageCont {
+    width: 100%;
+    margin: 0 0 10vh;
+}
+
+.heroImage {
+    width: 20vw;
+    max-width: 200px;
+    opacity: 0.75;
+    display: block;
     margin: 0 auto;
 }
 
@@ -87,13 +100,28 @@
     .searchBarCont {
         padding: 5vh 10vw;
     }
+    .logo {
+        font-size: 3rem;
+    }
     .recipeContainer {
         padding: 10vh 10vw;
+    }
+    .heroImage {
+        width: 30vw;
     }
 }
 
 @media screen and (max-width: 430px) {
+    .logo {
+        font-size: 2rem;
+    }
+    .header {
+        font-size: 1.25rem;
+    }
     .recipeContainer {
         padding: 10vh 5px;
+    }
+    .heroImage {
+        width: 50vw;
     }
 }

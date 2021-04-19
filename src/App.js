@@ -20,7 +20,7 @@ const App = () => {
     const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`);
     const data = await response.json();
     setRecipes(data.hits);
-    console.log(data.hits)
+    console.log(data.hits);
   }
 
   const searchInput = event => {
@@ -33,14 +33,13 @@ const App = () => {
     setSearch("");
   }
 
-
   return (
     <div className={style.App}>
       <div className={style.searchBarCont}>
         <h1 className={style.logo}>Recipe Buddy.</h1>
         <h2 className={style.header}>Find the perfect recipe by typing any ingredient below</h2>
         <form onSubmit={formSubmit} className={style.searchForm}> 
-          <input className={style.searchBar} type="text" value={search} placeholder="e.g. potatoes" onChange={searchInput}/>
+          <input className={style.searchBar} type="text" value={search} placeholder="e.g. salmon" onChange={searchInput}/>
           <button className={style.searchButton} type="submit">Search</button>
         </form>
       </div>
@@ -57,7 +56,10 @@ const App = () => {
             mealType={recipe.recipe.mealType}
             link={recipe.recipe.url}
           />
-        ))}
+        ))} 
+      </div>
+      <div className={style.heroImageCont}>
+        <img src="../assets/images/Hero-design.svg" className={style.heroImage} id="heroImage"/>
       </div>
     </div>
   )
