@@ -6,6 +6,10 @@ Recipe Buddy is a platform that makes use of Edamam's Recipe Search API ([edamam
 
 Users are only able to pull a limited number of recipes in a limted number of time; 10 recipes per search/ 10 searches per minute- due to the limitations of using the free API package. This can be achieved by typing any ingredient of their choosing into the input field, which, in turn, retrieves recipes that include said ingredient in its list of ingredients. 
 
+## Deployment
+
+The site has been hosted on GitHub Pages and can be accessed [here](https://gerakas.github.io/React-Recipe-App/).
+
 ## UI
 
 The UI is very simple and clean. Comprised of a minimalistic layout and that of easy-to-read guidelines such as the hierarchy of the text and placement of the instructions that help guide the user to the input field below. 
@@ -20,10 +24,6 @@ The UI is very simple and clean. Comprised of a minimalistic layout and that of 
 - CSS Modules
 - Google Fonts
 - Web Gradients
-
-## Deployment
-
-The site has been hosted on GitHub Pages and can be accessed [here](https://gerakas.github.io/React-Recipe-App/).
 
 ## Credits
 
