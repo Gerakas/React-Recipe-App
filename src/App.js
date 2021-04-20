@@ -59,7 +59,7 @@ const App = () => {
         ))} 
       </div>
       <div className={style.heroImageCont}>
-        <img src="../assets/images/Hero-design.svg" className={style.heroImage} id="heroImage"/>
+        <img src="../assets/images/graphic.svg" className={style.heroImage} id="heroImage"/>
       </div>
     </div>
   )
