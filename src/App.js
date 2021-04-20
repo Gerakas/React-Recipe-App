@@ -59,7 +59,7 @@ const App = () => {
         ))} 
       </div>
       <div className={style.heroImageCont}>
-        <img src="../assets/images/graphic.svg" className={style.heroImage} id="heroImage"/>
+        <img src="https://raw.githubusercontent.com/Gerakas/React-Recipe-App/3a0edf0b7b331a7f760bb9585632201825edbf84/public/assets/images/graphic.svg" className={style.heroImage} id="heroImage"/>
       </div>
     </div>
   )
